@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let numb = 8;
+      console.log(numb); //8
+      console.log(typeof numb); //number
+      /*---*/
+      let text = "Hello!";
+      console.log(text); //Hello!
+      console.log(typeof text); //string
+      /*---*/
+      let bigNumb = 3n;
+      console.log(bigNumb); //3n
+      console.log(typeof bigNumb); //bigint
+      /*---*/
+      let difference = 3 < 1;
+      console.log(difference); //false
+      console.log(typeof difference); //boolean
+      let difference2 = 3 > 1;
+      console.log(difference2); //true
+      console.log(typeof difference2); //boolean
+      /*---*/
+      let name = null;
+      console.log(name); //null
+      console.log(typeof name); //object
+      /*---*/
+      let address = undefined;
+      console.log(address); //undefined
+      console.log(typeof address); //undefined
+      let address2;
+      console.log(address2); //undefined
+      console.log(typeof address2); //undefined
+      address = 20;
+      console.log(address); //20
+      console.log(typeof address); //number
+      /*---*/
+      let cars = { color: "red", brand: "audi", hp: 800 };
+      console.log(cars); //color: "red", brand: "audi", hp: 800
+      console.log(typeof cars); //object
+      let cars2 = { color: "red", brand: "audi", hp: 800 };
+      console.log(cars === cars2); //false
+      cars2 = cars;
+      console.log(cars === cars2); //true
+      cars.hp = 700;
+      console.log(cars); //hp = 700
+      console.log(cars2); // hp = 700
+      console.log(cars === cars2); //true
+      /*---*/
+      let about = Symbol("i am");
+      console.log(about); //Symbol("i am")
+      console.log(typeof about); //symbol
+      /*---*/
+      let colors = ["red", "green", "blue"];
+      console.log(colors); //["red", "green", "blue"]
+      console.log(typeof colors); //object
+      let colors2 = ["red", "green", "blue"];
+      colors2 = colors;
+      console.log(colors === colors2); //true
+      colors[3] = "orange";
+      console.log(colors);
+      console.log(colors === colors2); //true
+      let colors3 = ["red", "green", "blue"];
+      console.log(colors === colors3); //false
+      /*---*/
+      function money(inMonth, sum) {
+        let sumInMonth = sum * 2;
+        let total = sumInMonth + inMonth;
+        console.log(total);
+      }
+      money(" in month", 100); //200 in month
+      console.log(typeof money); //function
+    </script>
+  </body>
+</html>
